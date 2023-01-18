@@ -76,7 +76,10 @@ function App() {
     }
   ];
 
+
   // Onsubmit
+  // You can as well write the event type as React.Sysnthetic event
+  // On the event type for this click handler
   const handleSubmit = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault()
     console.log("Submit button clicked", e)
@@ -93,7 +96,9 @@ function App() {
 
   return (
     <div className="App">
-      <form>
+      <form style={{
+        marginTop: "40px"
+      }}>
         {inputs.map((input, index) => (
           <FormInputs
             {...input}
